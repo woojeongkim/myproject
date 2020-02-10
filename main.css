@@ -1,0 +1,567 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
+/*font-family: 'Nanum Gothic', sans-serif;*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic');
+
+/* -------------------- LAYOUT -------------------- */
+.container {
+width:1270px;
+margin:0 auto; 
+}
+a{
+text-decoration:none;
+font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* -------------------- HEADER -------------------- */
+header{
+background-color:#fff; 
+position:relative;
+padding:20px 0;
+}
+header .container{
+position:relative;
+}
+
+header h1 {
+  position:absolute; 
+  left:50%;
+   top:50%; 
+  transform:translate(-50%,-50%);
+	
+}
+header h1 .logo{
+	background:url(../images/Orionlogo.jpg) no-repeat center top;
+	width:182px;
+	height:40px;
+	display:inline-block;
+	text-indent:-9999em;
+	margin-left:-586px;
+	margin-top:-1px;
+}
+
+nav{
+display:flex; 
+justify-content:space-between;
+height:75px;
+}
+nav > ul {
+display:flex;
+align-items:center;
+}
+nav > p:first-child{
+  left:0;
+}
+nav > p:nth-of-type(2){
+  right:0;
+}
+
+nav > p:first-child,nav > p:nth-of-type(2){
+	position:absolute;
+	top:5px;
+}
+
+.menu-icon, .user-icon{
+	display:none;
+	color:#777;
+	font-size: 6vw;
+    padding: 4vw 6vw;
+}
+
+.menu_list{
+	position:absolute; left:50%; top:-200%;
+    transform:translateX(-50%);
+    width:12vw;
+	padding:23px;
+    box-sizing:border-box;
+    transition:top .4s ease-out;
+    opacity:0;
+	z-index:1;
+	list-style: none;
+}
+
+.menu_list a{
+	text-align:center;
+	font-size: 14px;
+	font-weight:normal;
+	display:block;
+	padding:16px;
+	color:#000;
+    text-decoration:none;
+}
+.menu_list a:hover{
+    color:#fff;
+}
+.menu_list.active{
+z-index:9999;
+top:100%;
+ opacity:1; 
+
+}
+.menu {
+width:50%; 
+justify-content: space-around;
+margin:0 auto;
+}
+.menu > li{
+	position:relative;
+	box-sizing:border-box;
+    text-align: center;
+    font-size:1.125em;
+	font-weight:700;
+	color:#000;
+}
+.menu > li > a > li > a{
+	color:#000;
+}
+
+.navbg{
+	position:absolute;
+	top:83%;
+	background: #e9e9e9;
+	width:100%;
+	height:0;
+	z-index:999;
+  transition:0.4s;
+
+}
+.navbg.active{
+    height:180px;
+}
+.top_right_menu > li ul.social_list{display:flex; position:static; background: transparent; padding:0; width:100%;}
+.top_right_menu > li ul.social_list a{
+    padding:0; border:0;
+}
+
+.login{
+	position:absolute;
+	top:10px;
+     right:150px;}
+.login a{
+	font-size:14px;
+	padding:5px 5px;
+	color:#000;
+	text-decoration:none;
+}
+.search {
+    background: #fff;
+    width: 40px;
+    height: 30px;
+    border: 1px solid #B3B3B3;
+    position: absolute;
+    transition: 0.4s;
+    list-style: none;
+    top:30px;
+}
+
+.search button {
+    color: red;  
+    margin-left: 105px;
+    background: none;
+    border: none;
+    margin-top: 7px;
+}
+
+.search input {
+    width: 0;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+    opacity: 0;
+    text-align: center;
+}
+
+.search{
+    width: 130px;
+}
+
+.search input {
+    opacity: 1;
+    width: 100px;
+}
+/*------------------------MAIN-------------------------------*/
+.banner1{
+  background-size:cover;
+ width: 100%;
+ position: relative;
+}
+.banner1 img{
+  top:72px;
+}
+.banner1 li{
+  list-style: none;
+}
+.main_banner h2{
+  text-align: center;
+  font-family: 'Jua', sans-serif;
+  font-size:50px;
+  font-weight:700;
+  position: absolute;
+  top:248px;
+  left:750px;
+  color:#fff;
+}
+  
+.main_banner{
+  margin-top:27px;
+  position: relative;
+
+}
+.bannerlogo{
+  position: absolute;
+  justify-content: center;
+  top:30px;
+}
+.inspiration_slides .pager{
+position:absolute;
+left:0;
+right:0;
+bottom:0;	
+z-index:110;
+text-align:center;	
+padding:20px 0;
+}
+.inspiration_slides .pager span{
+display:inline-block;
+width:30px;
+height:8px;
+background:#7A7A7A;
+text-indent:-9999em;	
+line-height:11px;
+margin:0 15px;
+cursor:pointer;
+}
+.inspiration_slides .pager span.cycle-pager-active{
+background:#586b95;
+}
+
+.chocopies{
+  position: absolute;
+  top:456px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.chocopies{
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  margin-top: 50px;
+  position: absolute;
+  top:456px;
+  align-items: flex-end;
+}
+
+.chocopies li{
+  list-style: none;
+} 
+
+.chocopies h3{
+
+  text-align: center;
+  color:#b3c9e9;
+  margin-top: 20px;
+  bottom: 10px;
+} 
+.newproducts ul{
+  display:flex;
+  margin:0 auto;
+}
+.newproducts h2{
+  margin-top:55px;
+  font-size:40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight:700;
+  color:#586b95;
+}
+.newproducts ul{
+  display: flex;
+  justify-content:space-between;
+}
+.newproducts li{
+ text-align:center;
+}
+.newproducts  img{
+  margin-top:27px;
+  border:1px solid #959595;
+}
+.controls .prev{
+right:calc(80% + 30px);
+}
+.controls .next{
+left:calc(80% + 30px);
+}
+.controls a{
+position:absolute;
+  top:3050px;
+transform:translateY(50%);
+font-size:60px;
+}
+/*---------------------card-------------------------------*/
+
+h6{
+    font-size:40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight:700;
+    color:#586b95;
+   position: absolute;
+   margin:0 auto;
+
+}
+.cards{
+    width:90rem;
+    margin: 0 auto;
+    margin-top:100px; 
+    display:flex;
+    justify-content: center;
+}
+
+.card_container{
+    width:14.3rem;
+    height: 14.3rem;
+   margin-left:93px;
+   margin: 77px auto;
+}
+.card_container:first-child{
+    margin-left:0;
+}
+.card{
+   width:100%;
+    height:100%; 
+    line-height:10rem;
+    position: relative;
+   transform-style: preserve-3d;
+    transition:0.7s;
+   cursor: pointer;
+   margin-top:27px;
+}
+.card_container:hover .card{  
+    transform:rotateY(180deg);
+}
+.card_container:hover .for_img{  
+    opacity: 0;
+}
+.cardimg .front{
+    backface-visibility: hidden;  
+}
+.front{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    opacity: 1;
+    transition: 0.5s;
+}
+.card:after{
+    content:"";
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width:16rem;
+    height:16rem;
+    position: absolute;
+    top:-15px;
+    left:-15px;
+}
+.front img{
+    filter:drop-shadow(1px 2px 0 rgba(22,72,100,.4));
+    backface-visibility: hidden;
+}
+.card .back{  
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    text-align:center;
+    font-size:30px;
+    font-weight: 400;
+    transform:rotateY(180deg);
+}
+.cards + div{
+    margin-top:150px;
+    text-align: center;
+}
+
+/*------------------------sns_list-------------------------------*/
+
+h5{
+  margin-top:55px;
+  font-size:40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight:700;
+  color:#586b95;
+  }
+.sns {
+  margin-top:46px;
+  
+}
+.sns .container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px; 
+  margin: 0 auto;
+}
+.sns_list li img{
+  transform: scale(0.7);
+}
+.bx-wrapper{
+  margin:0 auto;
+}
+
+/* -------------------- footer-------------------- */
+
+footer{
+    background:#8f8f8f;
+    padding:20px 0 ;
+    margin-top:100px;
+    width:100%;
+    height:100px;
+    }
+.footer_wraper{    
+    display: flex;
+}
+.address{
+   float:left;
+    margin-right:370px;
+    }
+    .address li {
+        list-style:none;
+    }
+    .address li a{
+        text-decoration:none;
+        color:#fff;	
+    }
+    .footer_right li{
+        float:left;
+        margin-right:10px;
+    }
+    .footer_right li:last-child{
+        margin-right:0;
+    }
+    .footer_right li a{
+        color:#fff;
+    }
+    
+    .address.left p{
+        color:#fff;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size:15px;
+        line-height:20px;
+        display:inline-block;
+    }
+    .address.left{display:inline-block;
+    }
+    
+
+/* -------------------- about-------------------- */
+
+.banner1_img{
+    background-image: url(../images/max-bender-3rNvnnO7avY-unsplash.jpg);
+  }
+h10{
+  display: inline-block;
+  padding: 13px 37px;
+  margin: 100px 0 20px;
+  color: #fff;
+  font-size:30px;
+}
+.about_banner2 {
+    background: #fcfcfc;
+  }
+  .about_banner1 {
+    height: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+  .container_2 {  
+    margin: 0 auto;
+    width: 1270px;
+    background: #fff;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .tap_menu {  
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+  }
+  .tap_menu ul {
+    display: flex;
+  }
+  .tap_menu ul li {
+     flex: 1;
+  }
+  .tap_menu ul a {
+    display: inline-block;
+    width: 100%;
+    color: #fff; 
+     line-height: 60px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .tap_menu ul a:hover{
+    background-color: #f26522;
+  }
+  .tap_menu ul a.fixation{
+    background-color: #f26522;
+  }
+  .introduction{
+    padding: 100px 100px;
+  }
+  .introduction .President {
+    display: flex;
+    margin-top: 50px;
+  }
+  .introduction .President img {
+    width: 319px;
+    height: 466px;
+    margin-top:-50px;
+}
+  .President .introduction_text {
+    width: 600px;
+    text-align: left;
+    margin-right: 150px;
+  }
+  .President .introduction_text p {
+    margin-bottom: 20px;
+    color: #000;
+  }
+  .sign h4{
+  display:inline;
+  font-size: 20px;
+  font-family: 'Nanum Gothic';
+  font-weight: 400;
+}
+.sign img{
+  transform: translate(1px, 20px);
+}
+
